@@ -33,13 +33,13 @@ colnames(New) <- colnames(df.a)
 rbind(df.a,New)
 df.r <- rbind(df.a,New)
 df.r
-row.names(df.r)<- c(row.names(df.a[1:15,]),"New")
+row.names(df.r)<- c(row.names(df.a[1:15,]),"New")#very nice! I approve of nesting operations.
 df.r
 # Export the data frame as a .csv file 
 write.csv(df.r,"C:/GitHub/R4Eco_2022/Week1/sherinskynl.csv", row.names = TRUE)
 
 # Generate summary statistics of your data frame and copy them as text into your script under a new section heading.
-summary(df.r)
+summary(df.r)#These should have been numbers - you were so close to perfection! The numbers needed to be forced to numeric like the tutorial.
 #  Bears             Cashmere           duchess              dirt          
 # Length:16          Length:16          Length:16          Length:16         
 # Class :character   Class :character   Class :character   Class :character  
