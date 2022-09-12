@@ -40,7 +40,8 @@ arrows(b.plot, df.mean$Mean-df.sd$StanDev,
   # Change the point shape and color to something NOT used in the example.
   # Change the x and y labels and add a title
   # Export the plot as a JPEG by using the "Export" button in the plotting pane.
-
+plot(df1$dec.num ~ df1$unique.num)
+plot(df1$dec.num ~ df1$rep.num, xlab = "Explanatory", ylab = "Response", main = "Plot by Numbers")
 # Upload both plots with the script used to create them to GitHub.
   # Follow the same file naming format as last week for the script.
   # Name plots as Lastname_barplot or Lastname_scatterplot. Save them to your "plots" folder.
