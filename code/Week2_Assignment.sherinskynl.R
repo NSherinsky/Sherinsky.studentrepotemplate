@@ -36,13 +36,15 @@ b.plot <- barplot(df.mean$Mean,names.arg = df.mean$Factor, xlab = "Frequency", y
 arrows(b.plot, df.mean$Mean-df.sd$StanDev,
        b.plot, df.mean$Mean+df.sd$StanDev,angle=90,code=3)
 
+#I was looking for code to export the pdf...BUT you created the right dimensions through the export tool. So kudos.
+
 # Create a scatter plot between two of your numeric columns.
   # Change the point shape and color to something NOT used in the example.
   # Change the x and y labels and add a title
   # Export the plot as a JPEG by using the "Export" button in the plotting pane.
 plot(df1$dec.num ~ df1$unique.num)
 plot(df1$dec.num ~ df1$rep.num, xlab = "Explanatory", ylab = "Response", main = "Plot by Numbers", 
-     cex.axis=0.3, cex.main=0.4, cex.lab=2.34, pch=24, col = "thistle")
+     cex.axis=0.3, cex.main=0.4, cex.lab=2.34, pch=24, col = "thistle") #that is almost glorious in how hideous the axis label sizes are. You were supposed to change the labels though...otherwise perfect!
 colors()
 # Upload both plots with the script used to create them to GitHub.
   # Follow the same file naming format as last week for the script.
