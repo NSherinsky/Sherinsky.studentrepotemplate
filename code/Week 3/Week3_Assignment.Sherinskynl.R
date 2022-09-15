@@ -63,6 +63,8 @@ diversity(data = geese, type = "berger-parker", category_row = TRUE, dis = NULL,
 #2006       0.8446653        1.183901
           # Diversity metrics are frequently used in community ecology for reasons ranging from a quick comparison between sites to understanding community stability.
           # Their calculation can be very tedious by hand - and very fast with a package designed for the operation.
-
-
-
+#enjoy :) Turn up your sound its kinda quiet
+install.packages("beepr")
+library(beepr)
+beep(9)
+#omg pRanked, i cant believe you fell for it 
