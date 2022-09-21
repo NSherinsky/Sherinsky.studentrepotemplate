@@ -3,7 +3,7 @@
 
 # (2) Give one reason why information on the time between peak flow events up- and downstream could be valuable? (4 pts)
 # Knowing the time between peak flows could help one to figure out the distance between lewisburg and sunbury, 
-# which in turn would give you how fast the water in traveling.
+# which in turn would give you how fast the water in traveling. #Time can't tell you distance, but time+distance can tell you velocity.
 
 # Package scavenger hunt! (12 pts each)
 
@@ -68,3 +68,4 @@ install.packages("beepr")
 library(beepr)
 beep(9)
 #omg pRanked, i cant believe you fell for it 
+#Thank you for making laugh harder than I should have at this!
