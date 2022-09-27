@@ -15,8 +15,9 @@
       # 3 points each
     #HINT- "Num.Cells.Progeny" has defined breaks. To display results, use the formula with the "chisqbreaks" argument as follows:
       #gofstat(list(fit.1, fit.2, fit.3, etc), chisqbreaks=c(1,2,4,8,16,32,64))
+library(fitdistrplus)
 one.col <- data$Num.Cells.Progeny
-fit.p.num <- fitdist(one.col, distr = "pois")
+fit.p.num <- fitdist(c(na.exclude(one.col)), distr = "pois")
 ?fitdist
 # Based on the AIC scores, which distribution is the best fit for: (4 pts)
   # (1) - The number of cells of progeny (data$Num.Cells.Progeny)?
