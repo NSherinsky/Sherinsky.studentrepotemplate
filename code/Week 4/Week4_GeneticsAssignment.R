@@ -34,6 +34,7 @@ plot(data$Yield ~ data$Env)
   # Hint: Does one model seem more likely to be over-fitted?
 #The model for Environment while it has less data points, most of them are significant, while in the 
 #genotype model there is a lot of data but only a handful are significant in their p values.
+#We are actually talking about the number of unique groups rather than the total number of samples. Your overall approach is on-point though. What about the r-squared?
 
 # Which environment would be your very WORST choice for generating a strong yield response? (2 points)
 #Sargodha would be the worst environment to produce a strong yield response since the p vaule was 0.7138
