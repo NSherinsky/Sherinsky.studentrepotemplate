@@ -7,7 +7,7 @@
 # Do all of the strains in the plot have the same distributions (yes/no)? (2 pt)
   #no
 # Based on these observations of your strain distributions, why did the authors use a Kruskal-Wallis test rather than ANOVA to compare the strains? (2 pts)
-  #The authors most likely used Kruskal-Wallis because the distribution sof the strains are not the same. If they were similar they would have used ANOVA
+  #The authors most likely used Kruskal-Wallis because the distributions of the strains are not the same. If they were similar they would have used ANOVA
 
 # Use the fitdist() and gofstat() functions to compare the poisson, negative binomial, and logistic distributions for:
   # (1) - The number of cells of progeny (data$Num.Cells.Progeny)
@@ -32,7 +32,7 @@ gofstat(list(fit.lg.rep, fit.nb.rep, fit.p.rep))
 # Based on the AIC scores, which distribution is the best fit for: (4 pts)
   # (1) - The number of cells of progeny (data$Num.Cells.Progeny)?
   # (2) - The replication time (data$RepTime.sec)?
-# The number of cells progeny has a better fit distribution because the AIC values are close too 8000 which is less 
+# The number of cells progeny has a better fit distribution because the AIC values are close to 8000 which is less 
 # than the replication time (values around 50,000 and 900,000) 
 
 # Plot a generic histogram for the replication time (data$RepTime.sec) (2 pt)
