@@ -32,8 +32,8 @@ gofstat(list(fit.lg.rep, fit.nb.rep, fit.p.rep))
 # Based on the AIC scores, which distribution is the best fit for: (4 pts)
   # (1) - The number of cells of progeny (data$Num.Cells.Progeny)?
   # (2) - The replication time (data$RepTime.sec)?
-# The number of cells progeny has a better fit distribution because the AIC values are close to 8000 which is less 
-# than the replication time (values around 50,000 and 900,000) 
+# 1 - The negative binomial distribution is best fit cause it is the lowest number at around 7315.
+# 2 - The negative binomial is also the best distribution cause it is the lowest number at 56169.
 
 # Plot a generic histogram for the replication time (data$RepTime.sec) (2 pt)
 hist(two.col, main = "Replication Time")
