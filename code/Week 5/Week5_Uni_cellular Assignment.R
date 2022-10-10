@@ -8,6 +8,7 @@
   #no
 # Based on these observations of your strain distributions, why did the authors use a Kruskal-Wallis test rather than ANOVA to compare the strains? (2 pts)
   #The authors most likely used Kruskal-Wallis because the distributions of the strains are not the same. If they were similar they would have used ANOVA
+#Key is the distributions are not normal, so we need to use median/ranks instead of mean.
 
 # Use the fitdist() and gofstat() functions to compare the poisson, negative binomial, and logistic distributions for:
   # (1) - The number of cells of progeny (data$Num.Cells.Progeny)
@@ -44,10 +45,13 @@ hist(two.col, main = "Replication Time")
 # The first large column shows the first big boom in population. This most likely raised the carrying capacity for the predators
 # so the population decreased with predation. Less prey means less predators so once there were not as many predators
 # the second tall column came as the population was able to boom again with out as high of predation risk.
+#Great hypothesis.
 
 x <- c(2,2,2,2,2,2,3,3,3,4,4,4,4,5)
 y <- c(1,2,3,4,5,6,3,4,6,2,4,5,6,1)
 plot(x,y, xlim = c(-1,7), col = 641, pch = 15, main = "omg pRanked")
+
+#POINTS! Well played...well played indeed.
 
 
 
