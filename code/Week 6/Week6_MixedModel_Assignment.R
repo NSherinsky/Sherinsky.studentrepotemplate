@@ -34,8 +34,8 @@ r.squaredGLMM(glmm.coms)
 # while the claw.width has a p value of 0. Which is most likely an error? I am not sure.
 
 # (Q3) - Plot the residuals of both models. Do you think either model is a good fit? Why or why not? (3 pts)
-plot(glmm.coms.t)
-plot(glmm.coms)
+plot(glmm.coms.t$residuals)
+plot(glmm.coms$residuals)
 # the glmm.coms or the plot comparing proportional comsumption with claw width has a tighter pattern in the plot. 
 # But both are spread out and fuzzy, they do not provide good fits.
 # Re-run both models as generalized additive models instead (using gam). Then compare the AIC of both models. (4 points each)
