@@ -26,7 +26,7 @@ glmm.coms <- glmmPQL(prop.cons ~ claw.width, family = binomial, random = ~ 1 | b
 summary(glmm.coms)
 r.squaredGLMM(glmm.coms)
 # (Q1) - The code in line 8 is performing two operations at once. What are they? (2 pts)
-#  The code is signifying random effects in the data an specifying the family distribution as
+#  The code is signifying random effects in the data and specifying the family distribution as
 # binomial
 
 # (Q2) - Did the interactive effect change which variables predict proportional consumption? How, specifically, did the results change? (5 pts)
@@ -40,16 +40,16 @@ plot(glmm.coms$residuals)
 # But both are spread out and fuzzy, they do not provide good fits.
 # Re-run both models as generalized additive models instead (using gam). Then compare the AIC of both models. (4 points each)
 gam.coms.t <- gam(prop.cons ~ temperature + toadfish.cue.treatment, family = binomial, random = list(block=~ 1), data = df)
-gam.coms <- gam(prop.cons ~ claw.width, family = binomial, random = ~ 1 | block, data = df)
-
+gam.coms <- gam(prop.cons ~ claw.width*carapace.width, family = binomial, random = ~ 1 | block, data = df)
+summary(gam.coms.t)
+summary(gam.coms)
 # (Q4) - Which model is a better fit? (2 pt)
 AIC(gam.coms.t, gam.coms)
-
-
+# The model with the proportional comsumption compared to claw/carapace width is a better fit but only slightly.
 # (Q5) - Based on the residuals of your generalized additive models, how confident are you in these results? (2 pts)
-
-
-
+plot(gam.coms.t$residuals)
+plot(gam.coms$residuals)
+# I am not confident in either :D Both show really spread data with absolutely no pattern.
 
 
 
