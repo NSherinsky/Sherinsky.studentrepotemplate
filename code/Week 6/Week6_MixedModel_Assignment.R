@@ -52,6 +52,6 @@ plot(gam.coms$residuals)
 # I am not confident in either :D Both show really spread data with absolutely no pattern.
 
 
-
+# https://youtu.be/dQw4w9WgXcQ 
 
 
