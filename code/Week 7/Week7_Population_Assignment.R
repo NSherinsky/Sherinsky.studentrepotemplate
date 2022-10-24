@@ -62,4 +62,4 @@ legend("topright", c("Limnocalanus", "D.mendotae"), lty = c(1,2), col = c(1,2), 
 #DO NOT OPEN THE JPG TITLED gRR, you'll RegRet it!
 # OMG pRanked, you got a spell on you now. P.s thats hailey and i's cat, grr. We found him in a soy bean field.
 # It was his birthday this week, and in honor of this class (for one week only!!) the second r in grr is for ecology! 
-
+#partial points because this is fantastic...but there's no code involved!
