@@ -67,3 +67,15 @@ AIC(mod1)
 # have the biggest impact on the data sets. Using both these together you can see if your data is worth working with using the RDA
 # and the Linear model will help you further analyze your data comparing the abiotic to the biotic.
 
+
+par(bg=1)
+plot(c(0,0), cex=0, xlim=c(-1,1), ylim=c(-1,1))
+X <- runif(100,-1,1)
+Y <- runif(100,0,1)
+M <- rchisq(100,1)/20
+points(Y~X, cex=M, pch=19, col=colors()[1])
+points(0,-0.5, pch=19, col=colors()[498],cex=20)
+for (i in 1:4){polygon(locator(3),col=7)}
+
+# theoRetically, this will gRaph a oRange circle and if you click on thRee points it will cut out a tRiangle
+# and then you are caRving a pumpkin! 
