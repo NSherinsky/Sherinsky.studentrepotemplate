@@ -96,6 +96,16 @@ RsquareAdj(DipHabNoSpace.rda)
     #Fines = Percent of the substrate as "fines" i.e. small particles too small to measure
     #AveAr = The average size of rocks where each sample was collected
 cling.vs <- rda(Clingers.csv ~., HabitatbyPatch.csv)
-
+cling.vs
+# The AveAr or average size of rocks has the smallest RDA value. Which is to be expected as clingers 
+# rely on rocks for everything basically. Other that that, from the prior list, bottom to top is the order
+# of importance to clingers.
+dip.vs <- rda(Diptera.csv ~., HabitatbyPatch.csv)
+dip.vs
+# I got 0(??) from three of the RDA, I dunno what that means but, i feel if it means those have inconclusive
+# affects that would make sense since rocks, substrate an water velocity would not necessarily affect
+# diptera, as it flies. The rest could be argued that they would have an effect. I do think water depth 
+# could be explained as the most important as if the Diptera can only get food from surfaces of water
+# a deeper depth would make it harder to get food.
 #Part 4: How do you expect selecting both the spatial and the habitat variables would change the results of the RDAs from Part 1 above? (5 points)
   #(You do not need to redo the RDAs, unless you *want* to.)
