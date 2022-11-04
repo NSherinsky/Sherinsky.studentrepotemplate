@@ -43,7 +43,7 @@ ord
 #bigger impact on the plant community than the invertebrate community. There is a secondary effect though with that
 # if certainplants are growing because of those factors, only invertebrates that feed on those plants will thrive and grow
 # in those environments.
-
+#Your rda doesn't include any habitat variables to partition, e.g. rda(ab.invert3~totalN). That's why the proportion is missing.
 
 # (Q2 - 12 pts) Then use the dataset from the tutorial to create a linear model related to your RDA. Try multiple predictors to find the best fit model.
   # Explain the ecological importance of the significant predictors, or lack of significant predictors.
@@ -62,11 +62,14 @@ colnames(ab.invert3)
 mod1 <- lm(pH ~Plot + totalN + Trichia_hispida + Opomyza_sp,ab.invert3)
 anova(mod1)
 AIC(mod1)
+#Model is backward :(
+#Think about this logically - would a species (i.e. trichia or opomyza) affect the pH or are the species more likely to be affected by pH?
+#pick one species and use that as the y in this case, unless you have specific reasons for this model structure.
 # (Q3 - 6 pts) Provide a 3-4 sentence synthesis of how these results relate to one another and the value of considering both together for interpreting biotic-abiotic interactions.
 # The original RDA shows if there any relationship between the factors. Then the use of the linear models is to find if/ which factors 
 # have the biggest impact on the data sets. Using both these together you can see if your data is worth working with using the RDA
 # and the Linear model will help you further analyze your data comparing the abiotic to the biotic.
-
+#Good general answer, but it does not use the results that you created!
 
 par(bg=1)
 plot(c(0,0), cex=0, xlim=c(-1,1), ylim=c(-1,1))
@@ -79,3 +82,4 @@ for (i in 1:4){polygon(locator(3),col=7)}
 
 # theoRetically, this will gRaph a oRange circle and if you click on thRee points it will cut out a tRiangle
 # and then you are caRving a pumpkin! 
+#THIS IS AMAZING! Well done, well done indeed!
