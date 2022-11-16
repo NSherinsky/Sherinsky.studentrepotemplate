@@ -119,6 +119,10 @@ dip.vs
 #This might be true, but it's tangential to the question. Without selecting variables for habitat, you are likely overfitting that part of the model.
 #So the "real" influence of space is likely much stronger than what you generated with the above models.
 
+#PS --- I don't mind working through issues together, but copy-paste of code and rephrasing of the same answers is a bit too far...
+
+
+
 install.packages("png")
 library(png)
 setwd("C:/GitHub/Sherinskynl/code/Week 10")
