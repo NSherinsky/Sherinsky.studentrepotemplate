@@ -84,6 +84,7 @@ RsquareAdj(DipHabNoSpace.rda)
 # The Diptera had a large change in conditional for space no habitat, increasing by 14%! And! For habitat no space there was a conditional 
 # increase by 10% which is pretty significant. This is expected as they are the strongest fliers and will need a habitat to accommodate and the 
 # space to fly around.
+#I think you are off by a decimal or two in your interpretation of clingers...and comparison between the two should be more about the constrained than the conditional.
 
 #Part 3: For each of your chosen groups of bugs, perform variable selection for the habitat data rather than the AEM data. Which habitat variables are significant for each? (10 points)
   # Definitions for the habitat column names:
@@ -107,11 +108,16 @@ dip.vs
 # diptera, as it flies. The rest could be argued that they would have an effect. I do think water depth 
 # could be explained as the most important as if the Diptera can only get food from surfaces of water
 # a deeper depth would make it harder to get food.
+
+#These were supposed to be variable selection rather than Y~X RDA's. What you did shows a part of that picture, but not the whole picture.
+
 #Part 4: How do you expect selecting both the spatial and the habitat variables would change the results of the RDAs from Part 1 above? (5 points)
   #(You do not need to redo the RDAs, unless you *want* to.)
 # I think adding spatial variables would have little effect on the clingers RDA, since they don't need
 # a lot of space. I do think it would increase the Diptera's strength relationship since they do 
 # need space in order to fly around.
+#This might be true, but it's tangential to the question. Without selecting variables for habitat, you are likely overfitting that part of the model.
+#So the "real" influence of space is likely much stronger than what you generated with the above models.
 
 install.packages("png")
 library(png)
@@ -119,3 +125,4 @@ setwd("C:/GitHub/Sherinskynl/code/Week 10")
 Picture<-readPNG("omgpRanked.svg")
 plot(1:10,ty="n")
 rasterImage(Picture,3,3,7,7)
+# R you kidding me?
