@@ -74,11 +74,22 @@ macro.mean$Date <- format(as.POSIXct(macro.mean$Date,format='%m/%d/%Y'),format='
 Creeks <- rbind(oak.mean,eight.mean)
 
 
-macro.creeks <- merge(macro.mean,Creeks, by = "Date")
+macro.creeks <- merge(macro.mean,Creeks, by = c("Date","Water.Body"))
 
 library(mgcv)
-#week 6 for gam
-gam.mod1 <- gam(Flight.initiation.distance..FID.~Object + Area, family = Gamma, random = list(ID=~ 1), data = df)
+install.packages("MASS")
+library(MASS)
+?mgcv
+?gam
 
-gam.mod1 <- gam(macro.creeks~ Date + Water.Body, family = Gamma, random = list(ID=~1))
+gam.diverse <- gam(Diversity.score~ turbidity + Water.Body, family = Gamma, random = list(ID=~1), data = macro.creeks)
+summary(gam.diverse)
+
+plot(gam.diverse$residuals, ylim = c(-.1,.1))
+vis.gam(gam.diverse, view=c("turbidity","Water.Body"), theta = 45, color = "heat")
+AIC(gam.diverse)
+
+gam.mod2 <- gam(Diversity.score~ turbidity*Water.Body, family = Gamma, random = list(ID=~1), data = macro.creeks)
+summary(gam.mod2)
+AIC(gam.mod2)
 
