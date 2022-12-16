@@ -54,7 +54,8 @@ head(eighteenturb3)
 oakorc3$Water.Body <- str_replace(oakorc3$Water.Body, "0422016550", "Oak Orchard Creek")
 head(oakorc3)
 
-#means to have the same number of columns
+#means to have the same number of columns - Why did you do this step? 
+#Analysis could have worked without taking means first and put the variability to use.
 macro.mean <- aggregate(macroinvert4$Diversity.Score ~ macroinvert4$Water.Body + macroinvert4$Date.Sampled, FUN = "mean")
 head(macro.mean)
 
@@ -90,12 +91,17 @@ gam.mod2 <- gam(Diversity.score~ turbidity, family = Gamma, random = list(ID=~1)
 AIC(gam.mod2)
 gam.diverse <- gam(Diversity.score~ turbidity + Water.Body, family = Gamma, random = list(ID=~1), data = macro.creeks)
 summary(gam.diverse)
+  #Where is the summary for the other two GAM's?
+summary(gam.mod1)
+summary(gam.mod2)
+
 
 plot(gam.diverse$residuals, ylim = c(-.1,.1), ylab = "GAM Residuals", main = "Residuals for Generalized Additive Model")
+#Why are we looking at the residuals and a cleaned up plot? This makes it look like the GAM is a poor fit as well.
+
 vis.gam(gam.diverse, view=c("turbidity","Water.Body"), theta = 45, color = "heat")
 AIC(gam.diverse)
 AIC(gam.mod1,gam.mod2,gam.diverse)
-
 
 
 #Plotting the data
@@ -104,6 +110,6 @@ plot(macro.creeks$Diversity.score, macro.creeks$turbidity, xlim = c(0,10),xlab =
 text(macro.creeks$Diversity.score, macro.creeks$turbidity, labels = macro.creeks$Labels)
 
 boxplot(Diversity.score*turbidity ~ Water.Body, data = macro.creeks, ylim = c(0,35), xlab = "Water Body", ylab = "Diversity Score and Turbidity", main = "Divsersity combinded with Trubidity")
-
+#This is an interesting idea/approach. would be good to see what each looks like individually too and stats to match the figure!
 
 
